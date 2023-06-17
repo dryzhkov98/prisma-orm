@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "start": "npm run build && node dist/app.js",
-    "start:develop": "ts-node-dev --respawn app.ts"
+    "start:develop": "ts-node-dev --respawn app.ts",
+    "prisma:schema:generate": "awk 1 ./prisma/schemas/*.prisma > ./prisma/schema.prisma && npx prisma format"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@types/node": "^20.3.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.0",
+    "prisma": "^4.15.0",
     "rimraf": "^5.0.1",
     "typescript": "^5.1.3"
   },

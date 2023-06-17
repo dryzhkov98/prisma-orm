@@ -1,0 +1,10 @@
+// Существует проблема по разделению моделей на отдельные файлы, github issue: https://github.com/prisma/prisma/issues/2377
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
