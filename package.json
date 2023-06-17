@@ -4,6 +4,7 @@
   "description": "",
   "main": "./dits/app.js",
   "scripts": {
+    "prepare": "husky install",
     "build": "rimraf dist && tsc",
     "start": "npm run build && node dist/app.js",
     "start:develop": "ts-node-dev --respawn app.ts",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
+    "husky": "^8.0.3",
     "nodemon": "^2.0.22",
     "ts-node-dev": "^2.0.0"
   }
